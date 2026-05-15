@@ -137,21 +137,25 @@ class SampleControllerAsync(Node):
             if not touchValue_Front:
                 display_string += ' Front'
                 self.send_move_request("move_forward")
-                self.show_face("")
+                self.show_face("img/forwardeyes.png")
             if not touchValue_Back:
                 display_string += ' Back'
                 self.send_move_request("move_backward")
+                self.show_face("img/downeyes.png")
 
             if not touchValue_Right:
                 display_string += ' Right'
                 self.send_move_request("move_right")
+                self.show_face("img/righteyes.png")
 
             if not touchValue_Left:
                 display_string += ' Left'
                 self.send_move_request("move_left")
+                self.show_face("img/lefteyes.jpg")
 
             if display_string == '':
                 display_string = 'No button touched'
+                self.show_face("img/sleepyeyes.jpg")
 
             print(display_string)
 
